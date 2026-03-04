@@ -4,8 +4,8 @@ import { usePrimaryCamera } from "./react";
 import * as indexModule from "./index";
 
 describe("usePrimaryCamera hook", () => {
-  let mockGetBestRearCamera: any;
-  let mockGetAndSetBestRearCamera: any;
+  let mockGetBestRearCamera: ReturnType<typeof vi.spyOn>;
+  let mockGetAndSetBestRearCamera: ReturnType<typeof vi.spyOn>;
   let originalWindow: typeof window;
   let originalNavigator: typeof navigator;
 
@@ -31,7 +31,7 @@ describe("usePrimaryCamera hook", () => {
   });
 
   it("should initialize with loading true and cameraId null", async () => {
-    mockGetAndSetBestRearCamera.mockResolvedValueOnce(new Promise(() => {})); // Hangs forever
+    mockGetAndSetBestRearCamera.mockResolvedValueOnce(new Promise(() => { })); // Hangs forever
 
     const { result } = renderHook(() => usePrimaryCamera());
 
