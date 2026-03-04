@@ -26,7 +26,7 @@ Whether you're building a **barcode scanner**, a **proctored exam interface**, o
 - **Caching**: Utility to persist the optimal device ID, speeding up subsequent application loads. 💾
 - **Zero Dependencies**: Tiny bundle size to keep your application fast. 🪶
 
-## �📦 Installation
+## 📦 Installation
 
 ```bash
 npm install detect-primary-camera
