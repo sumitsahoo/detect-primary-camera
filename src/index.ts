@@ -29,7 +29,13 @@ export const getBestRearCamera = async (): Promise<string | null> => {
     return null;
   }
 
-  const devices = await navigator.mediaDevices.enumerateDevices();
+  let devices: MediaDeviceInfo[] = [];
+  try {
+    devices = await navigator.mediaDevices.enumerateDevices();
+  } catch (err) {
+    console.warn("Could not enumerate devices", err);
+    return null;
+  }
   const videoDevices = devices.filter((device) => device.kind === "videoinput");
 
   if (videoDevices.length === 0) return null;
@@ -71,10 +77,10 @@ export const getBestRearCamera = async (): Promise<string | null> => {
       const capabilities =
         (videoTrack.getCapabilities?.() as
           | (MediaTrackCapabilities & {
-              torch?: boolean;
-              focusDistance?: { min: number; max: number; step: number };
-              zoom?: { min: number; max: number; step: number };
-            })
+            torch?: boolean;
+            focusDistance?: { min: number; max: number; step: number };
+            zoom?: { min: number; max: number; step: number };
+          })
           | undefined) ?? {};
 
       const settings = videoTrack.getSettings();
@@ -154,7 +160,12 @@ export const getAndSetBestRearCamera = async (): Promise<string | null> => {
     return null;
   }
 
-  let cameraId = localStorage.getItem(STORAGE_KEY_CAMERA_ID);
+  let cameraId: string | null = null;
+  try {
+    cameraId = localStorage.getItem(STORAGE_KEY_CAMERA_ID);
+  } catch (err) {
+    console.warn("Could not access localStorage", err);
+  }
 
   // Validate that the cached camera ID still translates to physically present hardware
   if (cameraId && typeof navigator !== "undefined" && navigator.mediaDevices) {
@@ -163,7 +174,11 @@ export const getAndSetBestRearCamera = async (): Promise<string | null> => {
       const exists = devices.some((d) => d.deviceId === cameraId && d.kind === "videoinput");
       if (!exists) {
         cameraId = null;
-        localStorage.removeItem(STORAGE_KEY_CAMERA_ID);
+        try {
+          localStorage.removeItem(STORAGE_KEY_CAMERA_ID);
+        } catch (err) {
+          console.warn("Could not access localStorage", err);
+        }
       }
     } catch (_e) {
       // If enumerateDevices fails, assume cache is invalid to be safe
@@ -174,7 +189,11 @@ export const getAndSetBestRearCamera = async (): Promise<string | null> => {
   if (!cameraId) {
     cameraId = await getBestRearCamera();
     if (cameraId) {
-      localStorage.setItem(STORAGE_KEY_CAMERA_ID, cameraId);
+      try {
+        localStorage.setItem(STORAGE_KEY_CAMERA_ID, cameraId);
+      } catch (err) {
+        console.warn("Could not access localStorage", err);
+      }
     }
   }
   return cameraId;
