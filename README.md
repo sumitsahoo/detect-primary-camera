@@ -1,6 +1,6 @@
 <div align="center">
   <h1>📸 detect-primary-camera</h1>
-  <p>A lightweight, zero-dependency library to robustly detect the primary rear camera on mobile devices (iOS & Android). 📱 Dual-camera, triple-camera, and quad-camera phones expose multiple lenses (ultra-wide, telephoto, macro, infrared) to the browser. This library uses device labels and capabilities to safely filter and return the **main/wide camera** that is best suited for barcode scanning, photos, etc. 🎯</p>
+  <p>A lightweight, zero-dependency library to robustly detect the primary rear camera on mobile devices (iOS & Android). 📱</p>
 
   ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/sumitsahoo/detect-primary-camera/publish.yml)
   ![NPM Version](https://img.shields.io/npm/v/detect-primary-camera)
@@ -10,10 +10,23 @@
 
 </div>
 
+## 💡 The Motivation
 
+Dual-camera, triple-camera, and quad-camera phones expose multiple lenses (ultra-wide, telephoto, macro, infrared) to the browser. This often leads to web applications selecting the wrong or suboptimal camera.
 
+**The Proctored Exam Problem:** I went through this exact issue while appearing for a certification exam. The exam's web app selected my phone's macro lens, making my ID and face blurry and unrecognizable. This frustrating experience led me to build a better, reusable, and fully open-source utility to solve this problem once and for all.
 
-## 📦 Installation
+Whether you're building a **barcode scanner**, a **proctored exam interface**, or just a standard photo capture app, this library safely filters and returns the **main/wide camera** that is best suited for the job. 🎯
+
+## ✨ Features
+
+- **Modern Device Support**: Explicitly penalizes ultra-wide, telephoto, and macro lenses which are terrible for general purposes like barcode scanning or exam proctoring. �
+- **Cross-Platform**: Handles iOS ("Back Camera") and Android ("camera 0") quirks seamlessly. 🍎🤖
+- **Framework Agnostic**: Works perfectly in Vanilla JS/TS, with dedicated hooks available for React and Next.js. ⚛️
+- **Caching**: Utility to persist the optimal device ID, speeding up subsequent application loads. 💾
+- **Zero Dependencies**: Tiny bundle size to keep your application fast. 🪶
+
+## �📦 Installation
 
 ```bash
 npm install detect-primary-camera
@@ -57,12 +70,6 @@ const CameraComponent = () => {
     return <video autoPlay playsInline muted id={cameraId} />;
 };
 ```
-
-## ✨ Features
-- **Modern Device Support**: Explicitly penalizes ultra-wide, telephoto, and macro lenses which are terrible for general purposes like barcode scanning. 🔍
-- **Cross-Platform**: Handles iOS ("Back Camera") and Android ("camera 0") quirks. 🍎🤖
-- **Caching**: Utility to persist the optimal device ID. 💾
-- **Zero Dependencies**: Tiny bundle size. 🪶
 
 ## 📄 License
 [MIT](LICENSE)
