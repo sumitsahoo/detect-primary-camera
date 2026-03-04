@@ -71,5 +71,11 @@ const CameraComponent = () => {
 };
 ```
 
+## 🤝 Contributing
+
+We welcome contributions from the community! Whether it's adding a new feature, fixing a bug, or improving documentation, your help is **greatly appreciated**.
+
+Please see the [CONTRIBUTING.md](CONTRIBUTING.md) file for more information on how to get started, set up your development environment, and submit a Pull Request.
+
 ## 📄 License
 [MIT](LICENSE)
