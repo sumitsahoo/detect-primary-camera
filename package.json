@@ -41,6 +41,14 @@
   ],
   "author": "Sumit Sahoo",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sumitsahoo/detect-primary-camera.git"
+  },
+  "homepage": "https://github.com/sumitsahoo/detect-primary-camera#readme",
+  "bugs": {
+    "url": "https://github.com/sumitsahoo/detect-primary-camera/issues"
+  },
   "peerDependencies": {
     "react": ">=16.8"
   },
