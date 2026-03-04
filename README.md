@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>📸 detect-primary-camera</h1>
+  <h1>📸 Detect Primary Camera</h1>
   <p>A lightweight, zero-dependency library to robustly detect the primary rear camera on mobile devices (iOS & Android). 📱</p>
 
   ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/sumitsahoo/detect-primary-camera/publish.yml)
