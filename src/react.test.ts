@@ -31,7 +31,7 @@ describe("usePrimaryCamera hook", () => {
   });
 
   it("should initialize with loading true and cameraId null", async () => {
-    mockGetAndSetBestRearCamera.mockResolvedValueOnce(new Promise(() => { })); // Hangs forever
+    mockGetAndSetBestRearCamera.mockResolvedValueOnce(new Promise(() => {})); // Hangs forever
 
     const { result } = renderHook(() => usePrimaryCamera());
 
