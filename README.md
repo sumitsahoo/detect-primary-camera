@@ -37,7 +37,7 @@ npm install detect-primary-camera
 ### Standard JavaScript / TypeScript
 
 ```typescript
-import { getBestRearCamera, getAndSetCameraIdWithFlash, FACING_MODE } from 'detect-primary-camera';
+import { getBestRearCamera, getAndSetBestRearCamera, FACING_MODE } from 'detect-primary-camera';
 
 // Example 1: Get the best camera directly
 const cameraId = await getBestRearCamera();
@@ -49,8 +49,8 @@ if (cameraId) {
   });
 }
 
-// Example 2: Get and cache the camera in localStorage for faster subsequent loads
-const cachedCameraId = await getAndSetCameraIdWithFlash();
+// Example 2: Detect the best camera and cache the result for the next time
+const cachedCameraId = await getAndSetBestRearCamera();
 ```
 
 ### React / Next.js

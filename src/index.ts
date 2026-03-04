@@ -149,7 +149,7 @@ export const getBestRearCamera = async (): Promise<string | null> => {
  * Caches the result in localStorage for future use
  * @returns Cached or newly detected camera ID
  */
-export const getAndSetCameraIdWithFlash = async (): Promise<string | null> => {
+export const getAndSetBestRearCamera = async (): Promise<string | null> => {
   if (typeof window === "undefined" || !window.localStorage) {
     return null;
   }

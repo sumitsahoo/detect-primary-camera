@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { getBestRearCamera, getAndSetCameraIdWithFlash } from "./index";
+import { getBestRearCamera, getAndSetBestRearCamera } from "./index";
 
 interface UsePrimaryCameraOptions {
   /**
@@ -24,7 +24,7 @@ export const usePrimaryCamera = (options: UsePrimaryCameraOptions = {}) => {
         setLoading(true);
         setError(null);
 
-        const id = useCache ? await getAndSetCameraIdWithFlash() : await getBestRearCamera();
+        const id = useCache ? await getAndSetBestRearCamera() : await getBestRearCamera();
 
         if (isMounted) {
           setCameraId(id);
