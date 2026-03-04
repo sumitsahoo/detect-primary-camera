@@ -1,8 +1,17 @@
-# 📸 detect-primary-camera
+<div align="center">
+  <h1>📸 detect-primary-camera</h1>
+  <p>A lightweight, zero-dependency library to robustly detect the primary rear camera on mobile devices (iOS & Android). 📱 Dual-camera, triple-camera, and quad-camera phones expose multiple lenses (ultra-wide, telephoto, macro, infrared) to the browser. This library uses device labels and capabilities to safely filter and return the **main/wide camera** that is best suited for barcode scanning, photos, etc. 🎯</p>
 
-A lightweight, zero-dependency library to robustly detect the primary rear camera on mobile devices (iOS & Android). 📱
+  ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/sumitsahoo/detect-primary-camera/publish.yml)
+  ![NPM Version](https://img.shields.io/npm/v/detect-primary-camera)
+  ![NPM Downloads](https://img.shields.io/npm/dw/detect-primary-camera)
+  [![Socket Badge](https://badge.socket.dev/npm/package/detect-primary-camera)](https://badge.socket.dev/npm/package/detect-primary-camera)
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Dual-camera, triple-camera, and quad-camera phones expose multiple lenses (ultra-wide, telephoto, macro, infrared) to the browser. This library uses device labels and capabilities to safely filter and return the **main/wide camera** that is best suited for barcode scanning, photos, etc. 🎯
+</div>
+
+
+
 
 ## 📦 Installation
 
@@ -56,4 +65,4 @@ const CameraComponent = () => {
 - **Zero Dependencies**: Tiny bundle size. 🪶
 
 ## 📄 License
-MIT
+[MIT](LICENSE)
