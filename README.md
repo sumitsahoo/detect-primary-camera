@@ -12,6 +12,8 @@ npm install detect-primary-camera
 
 ## 🚀 Usage
 
+### Standard JavaScript / TypeScript
+
 ```typescript
 import { getBestRearCamera, getAndSetCameraIdWithFlash, FACING_MODE } from 'detect-primary-camera';
 
@@ -27,6 +29,24 @@ if (cameraId) {
 
 // Example 2: Get and cache the camera in localStorage for faster subsequent loads
 const cachedCameraId = await getAndSetCameraIdWithFlash();
+```
+
+### React / Next.js
+
+For React applications, a dedicated hook is provided to handle resolution state and cleanup automatically.
+
+```tsx
+import { usePrimaryCamera } from 'detect-primary-camera/react';
+
+const CameraComponent = () => {
+    // Automatically uses cached IDs and handles loading/error states cleanly!
+    const { cameraId, loading, error } = usePrimaryCamera();
+
+    if (loading) return <div>Detecting camera...</div>;
+    if (error) return <div>Error: {error.message}</div>;
+
+    return <video autoPlay playsInline muted id={cameraId} />;
+};
 ```
 
 ## ✨ Features
