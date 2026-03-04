@@ -78,4 +78,7 @@ We welcome contributions from the community! Whether it's adding a new feature, 
 Please see the [CONTRIBUTING.md](CONTRIBUTING.md) file for more information on how to get started, set up your development environment, and submit a Pull Request.
 
 ## 📄 License
-[MIT](LICENSE)
+
+MIT © [Sumit Sahoo](https://github.com/sumitsahoo)
+
+Please refer to the [LICENSE](./LICENSE) file for the complete license details.
