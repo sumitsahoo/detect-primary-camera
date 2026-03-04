@@ -77,10 +77,10 @@ export const getBestRearCamera = async (): Promise<string | null> => {
       const capabilities =
         (videoTrack.getCapabilities?.() as
           | (MediaTrackCapabilities & {
-            torch?: boolean;
-            focusDistance?: { min: number; max: number; step: number };
-            zoom?: { min: number; max: number; step: number };
-          })
+              torch?: boolean;
+              focusDistance?: { min: number; max: number; step: number };
+              zoom?: { min: number; max: number; step: number };
+            })
           | undefined) ?? {};
 
       const settings = videoTrack.getSettings();
