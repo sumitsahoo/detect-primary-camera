@@ -3,5 +3,4 @@
  * @returns True if device is a phone/tablet
  */
 export const isPhone = (): boolean =>
-    typeof navigator !== 'undefined' &&
-    /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+  typeof navigator !== "undefined" && /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
