@@ -20,11 +20,11 @@ Whether you're building a **barcode scanner**, a **proctored exam interface**, o
 
 ## ✨ Features
 
-- **Modern Device Support**: Explicitly penalizes ultra-wide, telephoto, and macro lenses which are terrible for general purposes like barcode scanning or exam proctoring. �
-- **Cross-Platform**: Handles iOS ("Back Camera") and Android ("camera 0") quirks seamlessly. 🍎🤖
-- **Framework Agnostic**: Works perfectly in Vanilla JS/TS, with dedicated hooks available for React and Next.js. ⚛️
-- **Caching**: Utility to persist the optimal device ID, speeding up subsequent application loads. 💾
-- **Zero Dependencies**: Tiny bundle size to keep your application fast. 🪶
+- **Modern Device Support**: Explicitly penalizes ultra-wide, telephoto, and macro lenses which are terrible for general purposes like barcode scanning or exam proctoring.
+- **Cross-Platform**: Handles iOS ("Back Camera") and Android ("camera 0") quirks seamlessly.
+- **Framework Agnostic**: Works perfectly in Vanilla JS/TS, with dedicated hooks available for React and Next.js.
+- **Caching**: Utility to persist the optimal device ID, speeding up subsequent application loads.
+- **Zero Dependencies**: Tiny bundle size to keep your application fast.
 
 ## 📦 Installation
 
