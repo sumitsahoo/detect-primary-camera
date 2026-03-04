@@ -1,6 +1,6 @@
 {
   "name": "detect-primary-camera",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Zero-dependency library to robustly detect the primary rear camera on mobile devices",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
