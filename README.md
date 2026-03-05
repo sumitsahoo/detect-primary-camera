@@ -4,7 +4,7 @@
 
   ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/sumitsahoo/detect-primary-camera/publish.yml)
   ![NPM Version](https://img.shields.io/npm/v/detect-primary-camera)
-  ![NPM Downloads](https://img.shields.io/npm/dw/detect-primary-camera)
+  ![NPM Downloads](https://img.shields.io/npm/d18m/detect-primary-camera)
   [![Socket Badge](https://badge.socket.dev/npm/package/detect-primary-camera)](https://badge.socket.dev/npm/package/detect-primary-camera)
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
